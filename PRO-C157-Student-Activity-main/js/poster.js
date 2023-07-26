@@ -4,47 +4,30 @@ AFRAME.registerComponent("poster", {
     
   },
   
-     createTitleEl: function (position, item) {
-    const entityEl = document.createElement("a-entity");
-    entityEl.setAttribute("text", {
-          font: "exo2bold",
-          align: "center",
-          width: 70,
-          color: "#e65100",
-          value: item.title,
-        });
-    const elPosition = position;
-    elPosition.y = -20;
-    entityEl.setAttribute("position", elPosition);
-    entityEl.setAttribute("visible", true);
-     return entityEl ;
-
-
-      },
-  
+     
 
   createCards: function () {
     const thumbNailsRef = [
     {
           id: "bheem",
           title: "Bheem",
-          url: "./Assets/cb.png",
+          url: "./assets/thumbnails/cb.png",
         },
         {
           id: "doraemon",
           title: "Doraemon",
-          url: "./Assets/drm.png",
+          url: "./assets/thumbnails/drm.png",
         },
   
         {
           id: "spiderman",
           title: "Spiderman",
-          url: "./Assets/spm.png",
+          url: "./assets/thumbnails/spm.png",
         },
         {
           id: "superman",
           title: "Superman",
-          url: "./Assets/sum.png",
+          url: "./assets/thumbnails/sum.png",
         },
     ];
     let prevoiusXPosition = -60;
@@ -106,4 +89,23 @@ AFRAME.registerComponent("poster", {
 
     },
 
+
+    createTitleEl: function (position, item) {
+      const entityEl = document.createElement("a-entity");
+      entityEl.setAttribute("text", {
+            font: "exo2bold",
+            align: "center",
+            width: 70,
+            color: "#e65100",
+            value: item.title,
+          });
+      const elPosition = position;
+      elPosition.y = -20;
+      entityEl.setAttribute("position", elPosition);
+      entityEl.setAttribute("visible", true);
+       return entityEl ;
+  
+  
+        },
+    
 });
